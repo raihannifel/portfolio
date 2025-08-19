@@ -1,3 +1,25 @@
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+    
+    // Tutup menu saat mengklik link di mobile
+    const navItems = document.querySelectorAll('.nav-links a');
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            if (window.innerWidth < 992) {
+                navLinks.classList.remove('active');
+            }
+        });
+    });
+});
+
+
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
