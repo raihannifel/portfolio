@@ -105,6 +105,12 @@ body {
     }
 }
 
+    .mobile-menu-btn {
+        display: none; /* Sembunyikan tombol hamburger di desktop */
+    }
+}
+
+
 
 section {
     padding: 5rem 0;
