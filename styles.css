@@ -724,10 +724,24 @@ footer {
     }
 
     .about-content {
-        flex-direction: row;
+                flex-direction: row;
     }
 
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-links {
+        display: none; /* Hide nav links by default */
+    }
+
+    .mobile-menu-btn {
+        display: block; /* Show mobile menu button */
     }
 }
