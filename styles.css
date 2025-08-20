@@ -337,6 +337,10 @@ nav .container {
     margin-bottom: 0;
 }
 
+.tech-stack {
+    text-align: center;
+}
+
 .tech-stack h3 {
     font-size: 1.75rem;
     font-weight: 700;
@@ -346,8 +350,9 @@ nav .container {
 
 .tech-icons {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, max-content));
     gap: 1.5rem;
+    justify-content: center;
 }
 
 .tech-icon {
@@ -814,7 +819,7 @@ footer {
     }
 
     .about-content {
-        flex-direction: row;
+        flex-direction: column !important;
     }
 
     .skills-grid {
