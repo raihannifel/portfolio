@@ -90,27 +90,3 @@ window.addEventListener('scroll', animateOnScroll);
 
 // Trigger animation on initial load
 window.addEventListener('load', animateOnScroll);
-
-// Dark mode toggle (optional)
-const darkModeToggle = document.createElement('div');
-darkModeToggle.innerHTML = '<button id="darkModeToggle" class="dark-mode-toggle"><i class="fas fa-moon"></i></button>';
-document.body.appendChild(darkModeToggle);
-
-const darkModeBtn = document.getElementById('darkModeToggle');
-if (darkModeBtn) {
-    darkModeBtn.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        darkModeBtn.innerHTML = document.body.classList.contains('dark-mode') ? 
-            '<i class="fas fa-sun"></i>' : 
-            '<i class="fas fa-moon"></i>';
-        
-        // Save preference to localStorage
-        localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-    });
-    
-    // Check for saved preference
-    if (localStorage.getItem('darkMode') === 'true') {
-        document.body.classList.add('dark-mode');
-        darkModeBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    }
-}
